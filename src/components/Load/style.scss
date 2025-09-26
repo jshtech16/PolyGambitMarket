@@ -1,0 +1,70 @@
+.load-icon1,
+.load-icon2,
+.load-icon3 {
+    font-size: 10px;
+    margin-bottom: 0;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.load-icon1 {
+    animation-name: load-icon1-anim;
+}
+
+.load-icon2 {
+    animation-name: load-icon2-anim;
+}
+
+.load-icon3 {
+    animation-name: load-icon3-anim;
+}
+
+@keyframes load-icon1-anim {
+
+    0% {
+        margin-bottom: 0;
+    }
+
+    30% {
+        margin-bottom: 10px;
+    }
+
+    60%,
+    100% {
+        margin-bottom: 0;
+    }
+}
+
+@keyframes load-icon2-anim {
+
+    0%,
+    10% {
+        margin-bottom: 0;
+    }
+
+    40% {
+        margin-bottom: 10px;
+    }
+
+    70%, 100% {
+        margin-bottom: 0;
+    }
+}
+
+@keyframes load-icon3-anim {
+
+    0%,
+    20% {
+        margin-bottom: 0;
+    }
+
+    50% {
+        margin-bottom: 10px;
+    }
+
+    80%,
+    100% {
+        margin-bottom: 0;
+    }
+}

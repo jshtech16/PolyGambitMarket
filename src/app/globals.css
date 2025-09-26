@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --background-2nd: #2e2e2e;
+  --background-button: #BFF816;
+  --background-button-2nd: #ae2727;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px #301a3b; */
+  background-color: #ffffff44;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: #ffffff66;
+  /* -webkit-box-shadow: inset 0 0 6px #0d6efd; */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+div.MuiDialog-paper {
+  background-color: transparent;
+}
+
+.MuiSnackbar-anchorOriginBottomRight {
+  bottom: 64px !important;
+  max-width: 24rem !important;
+}
+
+@layer base {
+  @font-face {
+    font-family: MuseoModerno;
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/MuseoModerno.otf);
+  }
+
+  @font-face {
+    font-family: IntegralCF;
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/IntegralCF.otf);
+  }
+}
+
+@font-face {
+  font-family: "IntegralCF";
+  src: url("./fonts/Integral-CF/Demo_Fonts/Fontspring-DEMO-integralcf-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-poppins), sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.font-integralcf {
+  font-family: "IntegralCF", sans-serif;
+}
+
+.btn-border-gradient {
+  background: linear-gradient(#000000 0 0) padding-box,
+    linear-gradient(180deg, #bff816, #243000) border-box;
+  border: 1px solid transparent;
+  display: inline-block;
+}
+
+.gradiant-btn {
+  background: linear-gradient(#000000 0 0) padding-box,
+    linear-gradient(180deg, #bff816, #243000) border-box;
+  border: 1px solid transparent;
+  display: inline-block;
+}
+
+.border-gradient {
+  border: 0.86px solid;
+  border-image-source: linear-gradient(360deg,
+      #a763ff -50%,
+      rgba(0, 0, 0, 0) 70%);
+  border-image-slice: 1;
+  border-radius: 20px;
+}
+
+.progress {
+  position: relative;
+  margin: 4px;
+  float: left;
+  text-align: center;
+}
+
+.barOverflow {
+  position: relative;
+  overflow: hidden;
+  width: 58px;
+  height: 29px;
+  margin-bottom: -16px;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 5px solid #eee;
+}
+
+.my-footer {
+  @apply lg:hidden fixed bottom-0 left-[50vw] -translate-x-1/2 grid grid-cols-5 gap-2 items-center px-4 max-w-[1000px] h-24 shadow-lg border-l-2 border-r-2 border-t-2 border-l-[#202020] border-r-[#202020] border-t-[#202020] bg-[#050505];
+  @apply w-full max-[280px]:px-2 z-[999] pb-4 rounded-t-3xl text-[10.97px];
+
+  .footer-button {
+    @apply w-8 h-8 overflow-hidden flex justify-center items-center p-1;
+
+    .footer-button-image {
+      @apply w-6 h-6 relative;
+    }
+  }
+
+  .footer-item {
+    @apply flex flex-col items-center justify-center gap-2 h-full;
+  }
+}
+
+.react-calendar {
+  max-width: 350px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: #000000 !important;
+}
+
+.react-calendar__tile--active {
+  background: #BFF816 !important;
+  color: black !important;
+  border-radius: 10px;
+}
